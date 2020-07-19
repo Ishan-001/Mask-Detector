@@ -12,6 +12,7 @@ while True:
 
     for(x,y,w,h) in faces:
         cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
+        cv2.putText(img,'Face',(x,y-10),cv2.FONT_HERSHEY_SIMPLEX,1,(255,0,0,),2,cv2.LINE_AA)
 
     cv2.imshow('Face Detector',img)
     if cv2.waitKey(1) & 0xFF==ord('q'):
